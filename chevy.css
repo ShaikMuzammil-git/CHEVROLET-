@@ -1,0 +1,949 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(251, 248, 248);
+  margin: auto;
+  height: 100vw;
+  width: 100vw;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+#navBar {
+  height: 10vmin;
+  width: 98vw;
+  margin: auto;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 7px;
+  position: fixed;
+  z-index: 10;
+  align-self: center;
+  color: black;
+}
+#trucksMenu {
+  height: 81%;
+  width: auto;
+  color: black;
+  background-color: yellow;
+  text-align: center;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 1vmin;
+  left: 1vw;
+  font-size: 5vmin;
+  font-family: fantasy;
+}
+
+.material-icons {
+  font-size: inherit;
+}
+
+#topLogo {
+  height: 15vmin;
+  width: 40vmin;
+  background-image: url(logo1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 2vmin;
+}
+#carsMenu {
+  height: 81%;
+  width: auto;
+  color: black;
+  background-color: yellow;
+  text-align: center;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 1vmin;
+  right: 1vw;
+  font-size: 5vmin;
+  font-family: fantasy;
+}
+#section1 {
+  height: 100vmin;
+  width: 100vw;
+  background-image: linear-gradient(
+      115deg,
+      rgb(5, 2, 2),
+      rgba(22, 22, 24, 0.404)
+    ),
+    url("section1b.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section1Text {
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 8vw;
+  font-style: italic;
+  line-height: 1;
+  color: #fff;
+  position: absolute;
+  top: 27vmin;
+  left: 3vmin;
+  font-weight: 600;
+  letter-spacing: 2vmin;
+}
+#section1Bottom {
+  height: 18vmin;
+  width: 80vw;
+  background-color: #f7f743;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 8vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4vw;
+}
+
+#section1BottomText {
+  height: auto;
+  width: 100vw;
+  color: black;
+  font-family: Roboto Condensed, sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  margin: 3vh 5vmin 3vh 5vmin;
+  font-size: 4.5vh;
+  z-index: 2;
+}
+@media screen and (max-width: 900px) {
+  #section1BottomText {
+    font-size: 3vh;
+  }
+}
+@media screen and (max-width: 830px) {
+  #section1BottomText {
+    font-size: 2.3vh;
+    padding-left: -2vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  #section1BottomText {
+    font-size: 3vmin;
+  }
+}
+@media screen and (max-width: 470px) {
+  #section1BottomText {
+    font-size: 2vh;
+  }
+}
+@media screen and (max-width: 300px) {
+  #section1BottomText {
+    font-size: 1.3vh;
+  }
+}
+#section1BottomPlay {
+  height: 20vmin;
+  width: 74vw;
+  position: absolute;
+  z-index: 1;
+  right: 30vmin;
+  bottom: 0vmin;
+  background-color: yellow;
+  box-shadow: 40px 0px 49px 0px black;
+  transform: skew(-25deg);
+}
+#section2 {
+  height: 95vmin;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: Roboto Condensed, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+#section2Text {
+  height: 70%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-start;
+  justify-content: flex-start;
+  font-family: Roboto Condensed, sans-serif;
+  position: relative;
+  bottom: 6vmin;
+}
+#section2TextHead {
+  height: inherit;
+  width: 50vw;
+  font-size: 6vmin;
+  font-weight: 700;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#section2Photo {
+  height: inherit;
+  width: 50%;
+  background-color: #2f2b2b;
+  background-image: url("RIDE0.png");
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  text-align: justify;
+  z-index: -1;
+  position: relative;
+  top: 15vmin;
+}
+#section2Head2 {
+  background-color: yellow;
+  width: auto;
+  width: 67%;
+  font-size: 8vmin;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  #section2Head1 {
+    font-size: 6vmin;
+  }
+  #section2Head2 {
+    font-size: 8vmin;
+  }
+  #section2Head3 {
+    font-size: 6vmin;
+  }
+}
+
+#section2TextDescription {
+  width: 37vw;
+  font-size: 4vmin;
+  text-align: center;
+  margin-top: 9vmin;
+}
+#section2PhotoText {
+  position: absolute;
+  color: white;
+  width: 47%;
+  text-align: left;
+  font-size: 8vmin;
+  font-family: monospace;
+  letter-spacing: -0.1vw;
+  top: 2vmin;
+  left: 3vmin;
+}
+#section3PhotoText {
+  position: absolute;
+  color: white;
+  width: 88%;
+  text-align: left;
+  font-size: 8vmin;
+  font-family: monospace;
+  letter-spacing: -0.1vw;
+  top: 6vmin;
+  left: 7vmin;
+}
+#testRide {
+  font-size: 11vmin;
+  height: 9vmin;
+  width: 38vw;
+  background-color: yellow;
+  border: 2px solid black;
+  text-align: center;
+  margin-left: 31vw;
+  color: black;
+  transform: skew(-15deg);
+  font-size: 5.5vmin;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: -0.2vw;
+  border-radius: 6px;
+}
+
+#section3 {
+  height: 95vmin;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: Roboto Condensed, sans-serif;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 26vmin;
+}
+
+#section3Photo {
+  height: 125%;
+  width: 50%;
+  background-color: #2f2b2b;
+  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  text-align: justify;
+  z-index: -1;
+  position: relative;
+  top: -5vmin;
+  background-image: url(cargo\ Bed.png);
+}
+#section3Text {
+  height: 70%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-start;
+  justify-content: flex-start;
+  font-family: Roboto Condensed, sans-serif;
+  position: relative;
+  bottom: 6vmin;
+}
+#slideText {
+  height: 87vmin;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+#slideTextHead {
+  color: black;
+  height: auto;
+  width: 100vw;
+  text-align: center;
+  font-size: 11vmin;
+  font-family: system-ui;
+  font-weight: bold;
+  position: relative;
+  bottom: 14vmin;
+  z-index: 1;
+}
+#checkItOut {
+  color: black;
+  background-color: yellow;
+  height: 8vmin;
+  width: 28vmin;
+  font-size: 4vmin;
+  text-align: center;
+  align-items: center;
+  font-style: italic;
+  font-family: fantasy;
+  letter-spacing: 0.1vw;
+  z-index: 1;
+  position: relative;
+  top: -7vmin;
+  padding-top: 2vmin;
+}
+#slide {
+  height: 20vh;
+  width: 100vw;
+  color: red;
+  display: flex;
+  flex-direction: row;
+  display: none;
+}
+
+#section4 {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  background-image: radial-gradient(#887878, #3a3131);
+  position: relative;
+  top: 49vmin;
+  height: 95vmin;
+  z-index: -1;
+}
+#meetWhite {
+  height: 38%;
+  width: 46vw;
+  background-color: transparent;
+  position: absolute;
+  left: 22vw;
+  bottom: 20vmin;
+  background-image: url("whiteSlide.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  z-index: 2;
+}
+#HeadmeetRed {
+  height: 38%;
+  width: 46vw;
+  background-color: transparent;
+  position: absolute;
+  left: -10vw;
+  bottom: 20vmin;
+  background-image: url("redSlide.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  z-index: 2;
+}
+
+#section5 {
+  height: auto;
+  width: 62vw;
+  position: relative;
+  top: 56vmin;
+  left: 6vmin;
+  font-size: 4.2vmin;
+  text-align: left;
+  font-family: Roboto Condensed, sans-serif;
+  text-align: justify;
+}
+
+#section6 {
+  height: 57vw;
+  width: auto;
+  position: relative;
+  top: 72vmin;
+  background-image: url("goliathAngleSide.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#goliathColors {
+  height: 7%;
+  width: 17vw;
+  position: absolute;
+  right: 3vw;
+  top: 49vw;
+  border: 3px solid black;
+  border-radius: 52px;
+  display: flex;
+}
+#goliathRedColor {
+  height: 100%;
+  width: 9vw;
+  background-color: red;
+  border-radius: 52px 0px 0px 52px;
+}
+#goliathWhiteColor {
+  height: 100%;
+  width: 9vw;
+  background-color: white;
+  outline: 2px solid black;
+}
+#goliathBlackColor {
+  height: 100%;
+  width: 9vw;
+  background-color: rgb(36, 33, 33);
+  border-radius: 0px 52px 52px 0px;
+}
+#goliathColorsText {
+  height: auto;
+  width: 19vw;
+  position: absolute;
+  right: -0.5vw;
+  bottom: 115%;
+  font-size: 2.8vw;
+  padding-left: 3vw;
+  text-align: left;
+  font-family: fantasy;
+  /* border: 2px solid black; */
+}
+#goliathAngles {
+  height: 13%;
+  width: 69vw;
+  background-color: #2f2b2b;
+  border: 2px solid black;
+  align-self: center;
+  position: absolute;
+  bottom: 4vmin;
+  left: 7vw;
+  display: flex;
+}
+#goliathAngleRear {
+  height: 120%;
+  width: 120%;
+  background-image: url("goliathAngleRear.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  outline: 2px solid black;
+  z-index: 1;
+}
+#goliathAngleSideRear {
+  height: 100%;
+  width: 100%;
+  background-image: url("goliathAngleSideRear.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#goliathAngleSide {
+  height: 100%;
+  width: 100%;
+  background-image: url("goliathAngleSide.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#goliathAngleSideFront {
+  height: 100%;
+  width: 101%;
+  background-image: url("goliathAngleSideFront.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#goliathAngleFront {
+  height: 100%;
+  width: 100%;
+  background-image: url("goliathAngleFront.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#section7 {
+  height: 20vmin;
+  width: 100vw;
+  background-color: rgb(132, 0, 255);
+  display: none;
+}
+
+#getSilverado {
+  height: 11vmin;
+  width: 68vw;
+  background-color: yellow;
+  position: absolute;
+  top: -7vmin;
+  z-index: 1;
+  font-size: 7.5vmin;
+  font-family: fantasy;
+  font-weight: 800;
+  text-align: center;
+  align-items: center;
+  font-style: italic;
+}
+
+#bottomGolioth {
+  height: 12vmin;
+  width: 94vw;
+  position: absolute;
+  bottom: -18vmin;
+  font-size: 4.5vmin;
+  font-family: Roboto Condensed, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  left: 7vmin;
+}
+#letsRide {
+  background-color: black;
+  color: white;
+  width: 25vw;
+  height: 75%;
+  text-align: center;
+  padding-top: 3vmin;
+  font-family: Roboto Condensed, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#goliathHighlights {
+  height: 40vmin;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr;
+  grid-template-rows: 31vmin 10vmin;
+  grid-gap: 2vmin;
+  position: relative;
+  top: 99vmin;
+  left: 2vmin;
+}
+#hIGHLIGHTS {
+  position: absolute;
+  transform: rotate(-90deg);
+  font-size: 5vmin;
+  left: -4vmin;
+  bottom: 22vmin;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 4.5vmin;
+}
+#goliathHighlightsDetails {
+  padding-left: 5vmin;
+  padding-right: 6vmin;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 2.7vmin;
+  text-align: left;
+  padding-bottom: 1vmin;
+  padding-top: 2vmin;
+  background-color: #efe9e9;
+}
+
+#specIcon {
+  background-repeat: no-repeat;
+  height: 5vmin;
+  background-size: contain;
+}
+.specIconChassis {
+  background-image: url("chassisIcon.png");
+}
+.specIconEngine {
+  background-image: url("engineIcon.png");
+}
+.specIconSuspension {
+  background-image: url("suspensionIcon.png");
+}
+
+#specPlusIcon {
+  font-size: 6vmin;
+}
+
+@media screen and (max-width: 2000px) {
+  #section2TextHead {
+    font-size: 5vmin;
+  }
+  #section2Head2 {
+    font-size: 6.5vmin;
+  }
+}
+@media screen and (max-width: 1610px) {
+  #section1BottomText {
+    font-size: 3.5vmin;
+  }
+  #section2TextHead {
+    font-size: 4vmin;
+  }
+  #section2Head2 {
+    /* font-size: 5.5vmin; */
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  #section1BottomText {
+    font-size: 3.5vmin;
+  }
+}
+@media screen and (max-width: 600px) {
+  #section1BottomText {
+    font-size: 3.2vmin;
+  }
+}
+@media screen and (min-width: 2300px) {
+  #slideTextHead {
+    width: 72vw;
+  }
+}
+
+#cutomPiantGoliathTitle {
+  height: 11vmin;
+  width: 61vw;
+  background-color: yellow;
+  z-index: 10;
+  position: absolute;
+  top: -8vmin;
+  right: 0px;
+  padding-left: 5vw;
+  font-size: 3.5vmin;
+  padding-top: 2vmin;
+  font-family: Roboto Condensed, sans-serif;
+}
+#section8 {
+  height: 57vw;
+  width: 100vw;
+  /* background-color: #ff0303; */
+  background-size: contain;
+  position: relative;
+  top: 117vmin;
+  z-index: 0;
+}
+#goliathTopColor1 {
+  height: 27%;
+  width: 43vw;
+  position: absolute;
+  bottom: 34vw;
+  right: 25vw;
+  z-index: 1;
+  border-radius: 81px;
+  transform: rotate(15deg);
+}
+#goliathTopColor2 {
+  height: 45%;
+  width: 10vw;
+  position: absolute;
+  bottom: 23vw;
+  right: 14vw;
+  z-index: 1;
+  border-radius: 55px;
+  transform: rotate(-98deg);
+}
+
+.goliathTopColor {
+}
+
+#goliathTransparentBody {
+  height: inherit;
+  width: inherit;
+  background-image: url("bodyGoliath.png");
+  position: absolute;
+  background-size: contain;
+  z-index: 2;
+}
+#shadowGoliath {
+  height: inherit;
+  width: inherit;
+  background-image: url("shadowGoliath.jpg");
+  height: 57vw;
+  width: 100vw;
+  position: absolute;
+  background-size: contain;
+  opacity: 0.3;
+  z-index: 3;
+}
+#goliathTyre1 {
+  height: inherit;
+  width: inherit;
+  background-image: url("forgiatoGambe.jpg");
+  position: absolute;
+  background-size: contain;
+  z-index: 5;
+  display: none;
+}
+#goliathTyre2 {
+  height: inherit;
+  width: inherit;
+  background-image: url("forgiatoRivoto1.png");
+  position: absolute;
+  background-size: contain;
+  z-index: 5;
+}
+#grillGuard1 {
+  height: inherit;
+  width: inherit;
+  background-image: url("rhinoWrangler2.png");
+  position: absolute;
+  background-size: contain;
+  z-index: 4;
+}
+#grillGuard2 {
+  height: inherit;
+  width: inherit;
+  background-image: url("westinV12.png");
+  position: absolute;
+  background-size: contain;
+  z-index: 4;
+}
+#carriage {
+  height: inherit;
+  width: inherit;
+  background-image: url("carriage2.png");
+  position: absolute;
+  background-size: contain;
+  z-index: 6;
+}
+#colorSelector {
+  height: 20vw;
+  width: 28vw;
+  position: absolute;
+  bottom: 2vmin;
+  left: 11vw;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border-radius: 14px;
+}
+#bodyColor {
+  height: 42%;
+  width: 50%;
+  background-color: transparent;
+  margin: auto;
+  margin-top: 1vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 10vmin;
+}
+
+input[type="color"] {
+  background-color: #fff;
+  width: 100%;
+  height: 81%;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+#topColor {
+  height: 42%;
+  width: 50%;
+  background-color: transparent;
+  margin: auto;
+  margin-top: 1vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 10vmin;
+  /* border: 2px solid black; */
+}
+#bodyColorText {
+  height: 18%;
+  width: 25%;
+  position: absolute;
+  font-size: 1.4vw;
+  top: 4vmin;
+  left: -7vw;
+  font-weight: 800;
+  font-family: Roboto Condensed, sans-serif;
+}
+#topColorText1 {
+  height: 18%;
+  width: 25%;
+  position: absolute;
+  font-size: 1.4vw;
+  top: 3vmin;
+  left: -7vw;
+  font-weight: 800;
+  font-family: Roboto Condensed, sans-serif;
+}
+#topColorText2 {
+  height: 18%;
+  width: 476%;
+  position: absolute;
+  font-size: 1.4vw;
+  bottom: 4vw;
+  right: -13vw;
+  font-weight: 800;
+  font-family: Roboto Condensed, sans-serif;
+}
+#topColorText3 {
+  height: 31%;
+  width: 57%;
+  position: absolute;
+  font-size: 1.4vw;
+  top: -4vmin;
+  border-radius: 10px;
+  right: -9vw;
+  font-weight: 800;
+  font-family: Roboto Condensed, sans-serif;
+  border: 2px solid black;
+  text-align: center;
+}
+
+#wheelsCarrier {
+  height: 61%;
+  width: 11%;
+  /* border: 2px solid black; */
+  position: absolute;
+  left: 2vw;
+  top: 13%;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  border-radius: 19px;
+}
+#carrier {
+  font-weight: 900;
+  font-family: Roboto Condensed, sans-serif;
+  height: 17.3%;
+  width: 89%;
+  font-size: 1.4vw;
+  background-image: url("carriageTop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 0vw;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-bottom: 8vmin;
+  background-position: bottom;
+}
+#wheel1 {
+  font-weight: 900;
+  font-family: Roboto Condensed, sans-serif;
+  height: 22.3%;
+  width: 89%;
+  background-image: url("rivotoRim.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 1.4vw;
+  border: 2px solid black;
+  background-position-x: center;
+  border-radius: 10px 10px 0px 0px;
+}
+#wheel2 {
+  font-weight: 900;
+  font-family: Roboto Condensed, sans-serif;
+  height: 25.3%;
+  width: 89%;
+  background-image: url("gambeRim.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 0vw;
+  font-size: 1.4vw;
+  border: 2px solid black;
+  border-radius: 0px 0px 10px 10px;
+  background-position-x: center;
+}
+#grillGuards {
+  height: 14%;
+  width: 27%;
+  display: flex;
+  position: absolute;
+  bottom: 4vmin;
+  right: 5vw;
+  z-index: 7;
+  /* border: 2px solid black; */
+}
+#rhino {
+  font-weight: 900;
+  font-family: Roboto Condensed, sans-serif;
+  height: 100%;
+  width: 50%;
+  font-size: 1.4vw;
+  background-image: url("rhinoGrill.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 0vw;
+  border: 2px solid black;
+  border-radius: 10px 0px 0px 10px;
+  color: black;
+  background-position-x: right;
+}
+#westinV1 {
+  font-weight: 900;
+  font-family: Roboto Condensed, sans-serif;
+  height: 100%;
+  width: 50%;
+  background-image: url("westinGrill.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 0vw;
+  font-size: 1.4vw;
+  border: 2px solid black;
+  border-radius: 0px 10px 10px 0px;
+  color: #000000;
+  background-position-x: right;
+}
+
+#engine {
+  height: 60vh;
+  width: 990vw;
+  background-color: red;
+  z-index: 20;
+  position: relative;
+  top: 133vmin;
+  left: 0;
+  background-image: url("engine.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
