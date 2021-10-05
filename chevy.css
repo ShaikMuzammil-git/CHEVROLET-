@@ -8,6 +8,27 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media (min-width: 93.75em) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    /* font-size: 60%; */
+  }
+}
+@media (max-width: 61.25em) {
+  html {
+    /* font-size: 58%; */
+  }
+}
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
 body {
   background-color: rgb(251, 248, 248);
   margin: auto;
@@ -24,6 +45,7 @@ body {
   margin: auto;
   background-color: rgb(0, 0, 0);
   display: flex;
+  top: 0;
   justify-content: space-between;
   border-radius: 7px;
   position: fixed;
@@ -46,10 +68,17 @@ body {
   left: 1vw;
   font-size: 5vmin;
   font-family: fantasy;
+  cursor: pointer;
+  transition: all 0.5s;
+  /* padding-top: 1vmin; */
 }
 
+#trucksMenu:hover {
+  font-size: 5.5vmin;
+}
 .material-icons {
   font-size: inherit;
+  cursor: pointer;
 }
 
 #topLogo {
@@ -58,13 +87,16 @@ body {
   background-image: url(logo1.png);
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 2vmin;
+  position: fixed;
+  top: 2vmin;
+  left: 41vw;
 }
 #carsMenu {
   height: 81%;
   width: auto;
-  color: black;
-  background-color: yellow;
+  color: white;
+  /* background-color: yellow; */
+  border: 2px solid white;
   text-align: center;
   display: flex;
   border-radius: 6px;
@@ -73,10 +105,14 @@ body {
   position: relative;
   top: 1vmin;
   right: 1vw;
+  padding-left: 1vw;
   font-size: 5vmin;
   font-family: fantasy;
+  transition: all 0.4s;
+  cursor: pointer;
+  text-decoration: none;
 }
-#section1 {
+#pageStart {
   height: 100vmin;
   width: 100vw;
   background-image: linear-gradient(
@@ -84,7 +120,7 @@ body {
       rgb(5, 2, 2),
       rgba(22, 22, 24, 0.404)
     ),
-    url("section1b.webp");
+    url("pageStart.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -92,7 +128,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#section1Text {
+#pageStartText {
   font-family: Roboto Condensed, sans-serif;
   font-size: 8vw;
   font-style: italic;
@@ -104,10 +140,10 @@ body {
   font-weight: 600;
   letter-spacing: 2vmin;
 }
-#section1Bottom {
+#pageStartBottom {
   height: 18vmin;
-  width: 80vw;
-  background-color: #f7f743;
+  width: 55vw;
+  background-color: #ffc929;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -118,7 +154,7 @@ body {
   padding-left: 4vw;
 }
 
-#section1BottomText {
+#pageStartBottomText {
   height: auto;
   width: 100vw;
   color: black;
@@ -130,43 +166,43 @@ body {
   z-index: 2;
 }
 @media screen and (max-width: 900px) {
-  #section1BottomText {
+  #pageStartBottomText {
     font-size: 3vh;
   }
 }
 @media screen and (max-width: 830px) {
-  #section1BottomText {
+  #pageStartBottomText {
     font-size: 2.3vh;
     padding-left: -2vw;
   }
 }
 @media screen and (max-width: 700px) {
-  #section1BottomText {
+  #pageStartBottomText {
     font-size: 3vmin;
   }
 }
 @media screen and (max-width: 470px) {
-  #section1BottomText {
+  #pageStartBottomText {
     font-size: 2vh;
   }
 }
 @media screen and (max-width: 300px) {
-  #section1BottomText {
+  #pageStartBottomText {
     font-size: 1.3vh;
   }
 }
-#section1BottomPlay {
-  height: 20vmin;
-  width: 74vw;
+#pageStartBottomPlay {
+  height: 18vmin;
+  width: 72vw;
   position: absolute;
   z-index: 1;
   right: 30vmin;
   bottom: 0vmin;
   background-color: yellow;
-  box-shadow: 40px 0px 49px 0px black;
+  box-shadow: 20px -6px 29px 0px black;
   transform: skew(-25deg);
 }
-#section2 {
+#topNotch {
   height: 95vmin;
   width: 100%;
   display: flex;
@@ -174,8 +210,10 @@ body {
   font-family: Roboto Condensed, sans-serif;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-#section2Text {
+
+#topNotchText {
   height: 70%;
   width: 50%;
   display: flex;
@@ -187,7 +225,7 @@ body {
   position: relative;
   bottom: 6vmin;
 }
-#section2TextHead {
+#topNotchTextHead {
   height: inherit;
   width: 50vw;
   font-size: 6vmin;
@@ -198,20 +236,45 @@ body {
   align-items: center;
   justify-content: center;
 }
-#section2Photo {
-  height: inherit;
+#topNotchPhoto {
+  height: 100%;
   width: 50%;
   background-color: #2f2b2b;
   background-image: url("RIDE0.png");
-  background-size: cover;
-  background-position-y: center;
+  background-size: 95% 140%;
+  background-position-y: 93%;
   background-repeat: no-repeat;
   text-align: justify;
   z-index: -1;
   position: relative;
   top: 15vmin;
+  cursor: pointer;
+  /* animation-name: topNotchF  &  R; */
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
-#section2Head2 {
+@keyframes topNotchF {
+  0% {
+    background-color: #2f2b2b;
+    background-size: 95% 140%;
+  }
+  100% {
+    background-color: yellow;
+    background-size: 102% 155%;
+  }
+}
+@keyframes topNotchR {
+  100% {
+    background-color: #2f2b2b;
+    background-size: 95% 140%;
+  }
+  0% {
+    background-color: yellow;
+    background-size: 102% 155%;
+  }
+}
+#topNotchHead2 {
   background-color: yellow;
   width: auto;
   width: 67%;
@@ -220,35 +283,68 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  #section2Head1 {
+  #topNotchHead1 {
     font-size: 6vmin;
   }
-  #section2Head2 {
+  #topNotchHead2 {
     font-size: 8vmin;
   }
-  #section2Head3 {
+  #topNotchHead3 {
     font-size: 6vmin;
   }
 }
 
-#section2TextDescription {
+#topNotchTextDescription {
   width: 37vw;
   font-size: 4vmin;
   text-align: center;
   margin-top: 9vmin;
 }
-#section2PhotoText {
+#topNotchPhotoText {
   position: absolute;
   color: white;
-  width: 47%;
-  text-align: left;
+  width: 94%;
+  /* border: 2px solid red; */
+  text-align: right;
   font-size: 8vmin;
   font-family: monospace;
   letter-spacing: -0.1vw;
   top: 2vmin;
-  left: 3vmin;
+  right: 2vw;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  /* animation-name:topNotchText ; */
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
-#section3PhotoText {
+@keyframes topNotchTextF {
+  0% {
+    font-size: 8vmin;
+    color: white;
+  }
+  100% {
+    font-size: 10vmin;
+    color: black;
+    font-weight: 900;
+    text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
+      -1px -1px 0 white;
+  }
+}
+@keyframes topNotchTextR {
+  0% {
+    font-size: 10vmin;
+    color: black;
+    font-weight: 900;
+    text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
+      -1px -1px 0 white;
+  }
+  100% {
+    font-size: 8vmin;
+    color: white;
+  }
+}
+#cargoSpacePhotoText {
   position: absolute;
   color: white;
   width: 88%;
@@ -258,7 +354,37 @@ body {
   letter-spacing: -0.1vw;
   top: 6vmin;
   left: 7vmin;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
+@keyframes topNotchTextF {
+  0% {
+    font-size: 8vmin;
+    color: white;
+  }
+  100% {
+    font-size: 10vmin;
+    color: black;
+    font-weight: 900;
+    text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
+      -1px -1px 0 white;
+  }
+}
+@keyframes topNotchTextR {
+  0% {
+    font-size: 10vmin;
+    color: black;
+    font-weight: 900;
+    text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
+      -1px -1px 0 white;
+  }
+  100% {
+    font-size: 8vmin;
+    color: white;
+  }
+}
+
 #testRide {
   font-size: 11vmin;
   height: 9vmin;
@@ -276,7 +402,7 @@ body {
   border-radius: 6px;
 }
 
-#section3 {
+#cargoSpace {
   height: 95vmin;
   width: 100%;
   display: flex;
@@ -286,9 +412,10 @@ body {
   align-items: center;
   position: relative;
   top: 26vmin;
+  cursor: pointer;
 }
 
-#section3Photo {
+#cargoSpacePhoto {
   height: 125%;
   width: 50%;
   background-color: #2f2b2b;
@@ -300,8 +427,32 @@ body {
   position: relative;
   top: -5vmin;
   background-image: url(cargo\ Bed.png);
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
-#section3Text {
+@keyframes cargospaceF {
+  0% {
+    background-color: #2f2b2b;
+    background-size: 100% 100%;
+  }
+  100% {
+    background-color: yellow;
+    background-size: 104% 108%;
+  }
+}
+@keyframes cargospaceR {
+  0% {
+    background-color: yellow;
+    background-size: 104% 108%;
+  }
+  100% {
+    background-color: #2f2b2b;
+    background-size: 100% 100%;
+  }
+}
+
+#cargoSpaceText {
   height: 70%;
   width: 50%;
   display: flex;
@@ -333,7 +484,7 @@ body {
   font-weight: bold;
   position: relative;
   bottom: 14vmin;
-  z-index: 1;
+  z-index: 2;
 }
 #checkItOut {
   color: black;
@@ -346,12 +497,51 @@ body {
   font-style: italic;
   font-family: fantasy;
   letter-spacing: 0.1vw;
-  z-index: 1;
+  z-index: 2;
   position: relative;
-  top: -7vmin;
+  top: -10vmin;
   padding-top: 2vmin;
+  transition: all 0.5s;
 }
-#slide {
+#checkItOut:hover {
+  color: yellow;
+  background-color: black;
+  /* font-size:5vmin;
+  height: 10vmin;
+  width: 33vmin; */
+}
+
+#checkItOutBorder {
+  position: absolute;
+  /* background-color: red; */
+  animation-name: checkItOutBorder;
+  animation-duration: 1s;
+  animation-fill-mode: initial;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  height: 10vmin;
+  width: 28vmin;
+  top: 0;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+#checkItOutBorder:hover {
+  /* height: 12vmin;
+  width: 33vmin; */
+}
+
+@keyframes checkItOutBorder {
+  0% {
+    box-shadow: 0 0 0px 3px black;
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 5px 22px black;
+    opacity: 0;
+  }
+}
+*/ #slide {
   height: 20vh;
   width: 100vw;
   color: red;
@@ -360,7 +550,7 @@ body {
   display: none;
 }
 
-#section4 {
+#meetFamily {
   display: flex;
   width: 100vw;
   justify-content: space-around;
@@ -369,35 +559,82 @@ body {
   top: 49vmin;
   height: 95vmin;
   z-index: -1;
+  cursor: pointer;
 }
 #meetWhite {
   height: 38%;
   width: 46vw;
   background-color: transparent;
   position: absolute;
-  left: 22vw;
+  left: -51vw;
+  /* left: 100vw; */
   bottom: 20vmin;
   background-image: url("whiteSlide.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: bottom;
   z-index: 2;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
-#HeadmeetRed {
-  height: 38%;
-  width: 46vw;
+@keyframes meetWhite {
+  0% {
+    left: -51vw;
+  }
+  5% {
+    left: -41vw;
+  }
+  100% {
+    left: 52vw;
+  }
+}
+@keyframes byeWhite {
+  0% {
+    left: 52vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+#meetRed {
+  height: 48%;
+  width: 48vw;
   background-color: transparent;
   position: absolute;
-  left: -10vw;
-  bottom: 20vmin;
+  /* left: 100vw;  */
+  left: -59vw;
+  bottom: 19vmin;
   background-image: url("redSlide.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: bottom;
   z-index: 2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes meetRed {
+  0% {
+    left: -59vw;
+  }
+  5% {
+    left: -51vw;
+  }
+  100% {
+    left: -2vw;
+  }
 }
 
-#section5 {
+@keyframes byeRed {
+  0% {
+    left: -2vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+#buildIntro {
   height: auto;
   width: 62vw;
   position: relative;
@@ -409,12 +646,11 @@ body {
   text-align: justify;
 }
 
-#section6 {
+#view180deg {
   height: 57vw;
   width: auto;
   position: relative;
-  top: 72vmin;
-  background-image: url("goliathAngleSide.jpg");
+  top: 15vmin;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -423,16 +659,18 @@ body {
   width: 17vw;
   position: absolute;
   right: 3vw;
-  top: 49vw;
+  top: 50vw;
   border: 3px solid black;
   border-radius: 52px;
   display: flex;
+  cursor: pointer;
 }
 #goliathRedColor {
   height: 100%;
   width: 9vw;
   background-color: red;
   border-radius: 52px 0px 0px 52px;
+  cursor: pointer;
 }
 #goliathWhiteColor {
   height: 100%;
@@ -450,18 +688,18 @@ body {
   height: auto;
   width: 19vw;
   position: absolute;
-  right: -0.5vw;
-  bottom: 115%;
+  right: -1.5vw;
+  bottom: +125%;
   font-size: 2.8vw;
   padding-left: 3vw;
   text-align: left;
   font-family: fantasy;
   /* border: 2px solid black; */
 }
-#goliathAngles {
+#blackAngles {
   height: 13%;
-  width: 69vw;
-  background-color: #2f2b2b;
+  width: 66vw;
+  /* background-color: #2f2b2b; */
   border: 2px solid black;
   align-self: center;
   position: absolute;
@@ -469,54 +707,83 @@ body {
   left: 7vw;
   display: flex;
 }
-#goliathAngleRear {
-  height: 120%;
-  width: 120%;
-  background-image: url("goliathAngleRear.jpg");
+#blackAngle1S {
+  height: 100%;
+  width: 100%;
+  background-image: url("blackAngle1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: inherit;
-  outline: 2px solid black;
   z-index: 1;
+  transition: all 0.5s;
 }
-#goliathAngleSideRear {
+#blackAngle1S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#blackAngle2S {
   height: 100%;
   width: 100%;
-  background-image: url("goliathAngleSideRear.jpg");
-  background-size: contain;
+  background-image: url("blackAngle2.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: inherit;
+  z-index: 1;
+  transition: all 0.5s;
 }
-#goliathAngleSide {
+#blackAngle2S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#blackAngle3S {
   height: 100%;
   width: 100%;
-  background-image: url("goliathAngleSide.jpg");
+  background-image: url("blackAngle3.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.5s;
 }
-#goliathAngleSideFront {
+#blackAngle3S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#blackAngle4S {
   height: 100%;
   width: 101%;
-  background-image: url("goliathAngleSideFront.jpg");
+  background-image: url("blackAngle4.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.5s;
 }
-#goliathAngleFront {
+#blackAngle4S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#blackAngle5S {
   height: 100%;
   width: 100%;
-  background-image: url("goliathAngleFront.jpg");
+  background-image: url("blackAngle5.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+#blackAngle5S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
 }
 
-#section7 {
-  height: 20vmin;
-  width: 100vw;
-  background-color: rgb(132, 0, 255);
-  display: none;
-}
-
-#getSilverado {
-  height: 13vmin;
+/* #section7 {
+  /* height: 20vmin; */
+/* width: 100vw; */
+/* background-color: rgb(132, 0, 255); */
+/* display: none; */
+*/ #getredado {
+  height: 10vmin;
   width: 70vw;
   background-color: yellow;
   position: absolute;
@@ -528,7 +795,7 @@ body {
   font-weight: 800;
   text-align: center;
   align-items: center;
-  /* font-style: italic; */
+  font-style: italic;
   padding-top: 2vmin;
   transform: skewX(-24deg);
 }
@@ -555,24 +822,28 @@ body {
   font-family: Roboto Condensed, sans-serif;
   font-style: italic;
   font-weight: bold;
+  transition: all 0.5s;
 }
-
+#letsRide:hover {
+  background-color: yellow;
+  color: black;
+}
 #goliathHighlights {
   height: 40vmin;
   width: 70vw;
   display: grid;
-  grid-template-columns: 0.5fr 2fr 2fr 2fr;
-  grid-template-rows: 31vmin 10vmin;
+  grid-template-columns: 10vw 26vw 26vw 26vw;
+  grid-template-rows: 34vmin 10vmin;
   grid-gap: 2vmin;
   position: relative;
-  top: 99vmin;
-  left: 2vmin;
+  top: 106vmin;
+  left: 1vmin;
 }
 #hIGHLIGHTS {
   position: absolute;
   transform: rotate(-90deg);
   font-size: 5vmin;
-  left: -4vmin;
+  left: -6vmin;
   bottom: 22vmin;
   font-family: Roboto Condensed, sans-serif;
   font-size: 4.5vmin;
@@ -586,11 +857,12 @@ body {
   padding-bottom: 1vmin;
   padding-top: 2vmin;
   background-color: #efe9e9;
+  transition: all 0.5s;
 }
 
 #specIcon {
   background-repeat: no-repeat;
-  height: 5vmin;
+  height: 7vmin;
   background-size: contain;
 }
 .specIconChassis {
@@ -605,35 +877,40 @@ body {
 
 #specPlusIcon {
   font-size: 6vmin;
+  transition: all 1s;
+  color: black;
+}
+#specPlusIcon:hover {
+  color: yellow;
 }
 
 @media screen and (max-width: 2000px) {
-  #section2TextHead {
+  #topNotchTextHead {
     font-size: 5vmin;
   }
-  #section2Head2 {
-    font-size: 6.5vmin;
+  #topNotchHead2 {
+    font-size: 6.2vmin;
   }
 }
 @media screen and (max-width: 1610px) {
-  #section1BottomText {
+  #pageStartBottomText {
     font-size: 3.5vmin;
   }
-  #section2TextHead {
-    font-size: 4vmin;
+  #topNotchTextHead {
+    font-size: 2rem;
   }
-  #section2Head2 {
+  #topNotchHead2 {
     /* font-size: 5.5vmin; */
   }
 }
 
 @media screen and (max-width: 1450px) {
-  #section1BottomText {
+  #pageStartBottomText {
     font-size: 3.5vmin;
   }
 }
 @media screen and (max-width: 600px) {
-  #section1BottomText {
+  #pageStartBottomText {
     font-size: 3.2vmin;
   }
 }
@@ -644,7 +921,7 @@ body {
 }
 
 #cutomPiantGoliathTitle {
-  height: 15vmin;
+  height: 13vmin;
   width: 61vw;
   background-color: yellow;
   z-index: 10;
@@ -652,19 +929,17 @@ body {
   top: -9vmin;
   right: 0vw;
   padding-left: 10vw;
-  transform: skew(0deg);
   font-size: 3.5vmin;
   padding-top: 2vmin;
-  /* display: none; */
   font-family: Roboto Condensed, sans-serif;
 }
-#section8 {
+#customize {
   height: 57vw;
   width: 100vw;
   /* background-color: #ff0303; */
   background-size: contain;
   position: relative;
-  top: 117vmin;
+  top: 138vmin;
   z-index: 0;
 }
 #goliathTopColor1 {
@@ -716,7 +991,6 @@ body {
   background-image: url("forgiatoGambe.jpg");
   position: absolute;
   background-size: contain;
-  z-index: 5;
   display: none;
 }
 #goliathTyre2 {
@@ -725,7 +999,6 @@ body {
   background-image: url("forgiatoRivoto1.png");
   position: absolute;
   background-size: contain;
-  z-index: 5;
 }
 #grillGuard1 {
   height: inherit;
@@ -733,7 +1006,7 @@ body {
   background-image: url("rhinoWrangler2.png");
   position: absolute;
   background-size: contain;
-  z-index: 4;
+  display: none;
 }
 #grillGuard2 {
   height: inherit;
@@ -741,7 +1014,7 @@ body {
   background-image: url("westinV12.png");
   position: absolute;
   background-size: contain;
-  z-index: 4;
+  display: none;
 }
 #carriage {
   height: inherit;
@@ -749,7 +1022,6 @@ body {
   background-image: url("carriage2.png");
   position: absolute;
   background-size: contain;
-  z-index: 6;
 }
 #colorSelector {
   height: 20vw;
@@ -870,6 +1142,7 @@ input[type="color"] {
   border-radius: 10px;
   margin-bottom: 8vmin;
   background-position: bottom;
+  cursor: pointer;
 }
 #wheel1 {
   font-weight: 900;
@@ -883,6 +1156,7 @@ input[type="color"] {
   border: 2px solid black;
   background-position-x: center;
   border-radius: 10px 10px 0px 0px;
+  cursor: pointer;
 }
 #wheel2 {
   font-weight: 900;
@@ -897,6 +1171,7 @@ input[type="color"] {
   border: 2px solid black;
   border-radius: 0px 0px 10px 10px;
   background-position-x: center;
+  cursor: pointer;
 }
 #grillGuards {
   height: 14%;
@@ -922,6 +1197,7 @@ input[type="color"] {
   border-radius: 10px 0px 0px 10px;
   color: black;
   background-position-x: right;
+  cursor: pointer;
 }
 #westinV1 {
   font-weight: 900;
@@ -937,6 +1213,7 @@ input[type="color"] {
   border-radius: 0px 10px 10px 0px;
   color: #000000;
   background-position-x: right;
+  cursor: pointer;
 }
 
 #engine {
@@ -944,7 +1221,7 @@ input[type="color"] {
   width: 100vw;
   z-index: 0;
   position: relative;
-  top: 133vmin;
+  top: 60vmin;
   left: 0vmin;
   background-repeat: no-repeat;
   background-size: cover;
@@ -962,7 +1239,7 @@ input[type="color"] {
 }
 #noHood {
   height: 69vw;
-  width: 100vw;
+  width: 99vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -986,15 +1263,15 @@ input[type="color"] {
 }
 
 #peekEngine {
-  height: 14vmin;
+  height: 12vmin;
   width: auto;
   background-color: yellow;
   position: absolute;
-  top: -4vmin;
+  top: -8vmin;
   left: -4vmin;
   padding-left: 2vmin;
   z-index: 1;
-  font-size: 6.5vmin;
+  font-size: 7vmin;
   padding-right: 29vmin;
   font-family: fantasy;
   font-weight: 800;
@@ -1036,6 +1313,111 @@ input[type="color"] {
 }
 .slider {
   -webkit-appearance: none;
+  width: 65%;
+  height: 0px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 1;
+  transition: opacity 1s;
+  position: absolute;
+  bottom: 62%;
+  right: -1%;
+  transform: rotate(90deg);
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 4vw;
+  height: 40vmin;
+  background: yellow;
+  background-repeat: no-repeat;
+  border: 8px solid black;
+  cursor: pointer;
+}
+
+#testRideBottomBar {
+  height: inherit;
+  width: 0%;
+  background-color: black;
+  position: absolute;
+  left: -8vw;
+  /* animation-name: bookRideBar; */
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  z-index: -1;
+}
+@keyframes bookRideBarF {
+  0% {
+    width: 0%;
+    left: -8vw;
+  }
+  100% {
+    width: 60%;
+    left: 27vw;
+  }
+}
+@keyframes bookRideBarR {
+  0% {
+    width: 60%;
+    left: 27vw;
+  }
+  100% {
+    width: 0%;
+    left: -8vw;
+  }
+}
+#testRideBottomBarCar {
+  height: 6vh;
+  width: 5vw;
+  /* background-color: violet; */
+  /* border: 2px solid black; */
+  /* background-image: url("testRideCar.png"); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 1vw;
+  bottom: 0;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+
+@keyframes bookRideBarCarF {
+  0% {
+    left: 1vw;
+    opacity: 1;
+  }
+  100% {
+    left: 17vw;
+    opacity: 1;
+  }
+}
+@keyframes bookRideBarCarR {
+  0% {
+    left: 17vw;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 1vw;
+    opacity: 0;
+  }
+}
+/*  HORIZONTAL SLIDER
+
+.slider {
+  -webkit-appearance: none;
   width: 100%;
   height: 1px;
   border-radius: 5px;
@@ -1054,37 +1436,49 @@ input[type="color"] {
 .slider::-webkit-slider-thumb {
   appearance: none;
   width: 4vw;
-  height: 20vmin;
+  height: 30vmin;
   background: yellow;
   border: 8px solid black;
   cursor: pointer;
-}
-
+}    */
 #slideMe {
-  height: 14vmin;
-  width: 63vw;
+  height: 11vmin;
+  width: auto;
   background-color: yellow;
-  /* background-image: linear-gradient(45deg, grey, #497171); */
-  border: 2px solid black;
   position: absolute;
-  bottom: -12vmin;
-  right: 6vmin;
-  padding-left: 2vmin;
-  z-index: 1;
-  font-size: 6.5vmin;
-  padding-right: 29vmin;
+  bottom: -7vmin;
+  right: 0;
+  font-size: 7vmin;
   font-family: fantasy;
   font-weight: 800;
   text-align: center;
   align-items: center;
   padding-top: 3vmin;
   padding-right: 5vw;
-  padding-left: 9vw;
-  transform: skewX(-20deg);
+  font-style: italic;
   z-index: 4;
 }
-
-@media only screen and (max-width: 870px) {
+#slideMe2 {
+  height: 100%;
+  width: 6vw;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  left: -5vw;
+  z-index: 4;
+  transform: skew(-20deg);
+}
+#cutomPiantGoliathTitle2 {
+  height: 100%;
+  width: 8vw;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  left: -5vw;
+  z-index: 4;
+  transform: skew(-20deg);
+}
+/* @media only screen and (max-width: 870px) {
   #slideMe {
     font-size: 5.5vmin;
   }
@@ -1093,14 +1487,299 @@ input[type="color"] {
   #slideMe {
     font-size: 4vmin;
   }
+} */
+
+#grey {
+  height: 30vh;
+  width: 84vw;
+  background-color: black;
+  position: absolute;
+  top: -20vmin;
+  right: 0vw;
+  z-index: -1;
+  /* transform: skewX(-21deg); */
+}
+#grey2 {
+  height: inherit;
+  width: 22%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: -12vw;
+  z-index: -1;
+  transform: skewX(-21deg);
+  border-radius: 3vw;
+}
+#text1 {
+  height: 63%;
+  width: 82%;
+  /* background-color: red; */
+  position: absolute;
+  top: 21vmin;
+  right: 12%;
+  font-size: 8vw;
+  font-family: fantasy;
+  font-style: italic;
+  letter-spacing: 0.2vw;
+  z-index: 2;
+}
+#text2 {
+  height: 14%;
+  width: 29%;
+  background-color: transparent;
+  position: absolute;
+  top: 22vw;
+  left: 18%;
+  font-size: 2.5vw;
+  font-family: fantasy;
+  font-style: italic;
+  padding-left: 2vw;
+  z-index: 2;
+  border: 2px solid black;
+  border-radius: 24px;
+  transition: all 0.5s;
+  z-index: 4;
+  cursor: pointer;
+}
+#text2:hover {
+  background-color: black;
+  color: yellow;
+}
+#specifications {
+  height: 91vmin;
+  /* height: 91vmin; */
+  width: 100vw;
+  position: relative;
+  top: 216vmin;
+  background-color: #f0e7e7;
+  /* background-color: red; */
+}
+#goliathHighlights2 {
+  height: 74vmin;
+  width: 95vw;
+  display: grid;
+  grid-template-columns: 45vw 45vw;
+  grid-template-rows: 24vmin 24vmin 24vmin;
+  grid-gap: 2vmin;
+  position: absolute;
+  top: 8vh;
+  justify-content: center;
+  left: 3vw;
+  margin: auto;
+  opacity: 1;
+}
+#goliathHighlightsDetails2 {
+  padding-left: 5vmin;
+  padding-right: 6vmin;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 3vmin;
+  text-align: left;
+  padding-bottom: 1vmin;
+  padding-top: 2vmin;
+  background-color: white;
+  padding-left: 3vw;
+}
+
+#specIcon2 {
+  background-repeat: no-repeat;
+  height: 7vmin;
+  background-size: contain;
+}
+.specIconChassis2 {
+  background-image: url("chassisIcon.png");
+}
+.specIconEngine2 {
+  background-image: url("engineIcon.png");
+}
+.specIconSuspension2 {
+  background-image: url("suspensionIcon.png");
+}
+.specIconBrakes2 {
+  background-image: url("brakeIcon.png");
+}
+.specIconPaint2 {
+  background-image: url("paintIcon.png");
+}
+.specIconTyres2 {
+  background-image: url("tyreIcon.png");
+}
+#mechanicalSpecsBox {
+  height: 8.7vw;
+  width: 42vw;
+  background-color: #f0e7e7;
+  position: absolute;
+  top: -9vw;
+  left: 6vw;
+  transform: perspective(10px) rotateX(1deg);
+  border-radius: 25px 25px 0px 0px;
+  z-index: -1;
+  cursor: pointer;
+}
+#mechanicalSpecs {
+  height: auto;
+  width: auto;
+  /* background-color: red; */
+  position: absolute;
+  top: -7vw;
+  left: 10vw;
+  padding-top: 4vmin;
+  font-size: 2.4vw;
+  font-weight: 500;
+  /* border: 2px solid black; */
+  font-family: Roboto Condensed, sans-serif;
+  cursor: pointer;
+}
+#electricalSpecsBox {
+  height: 9vw;
+  width: 42vw;
+  background-color: #f0e7e770;
+  position: absolute;
+  top: -9vw;
+  left: 50vw;
+  transform: perspective(10px) rotateX(1deg);
+  border-radius: 25px 25px 0px 0px;
+  z-index: -1;
+  cursor: pointer;
+}
+#electricalSpecs {
+  height: auto;
+  width: auto;
+  /* background-color: red; */
+  position: absolute;
+  top: -7vw;
+  left: 54vw;
+  padding-top: 4vmin;
+  font-size: 2.4vw;
+  font-weight: 500;
+  /* border: 2px solid black; */
+  font-family: Roboto Condensed, sans-serif;
+  cursor: pointer;
+}
+#goliathHighlights3 {
+  height: 74vmin;
+  width: 95vw;
+  display: grid;
+  grid-template-columns: 45vw 45vw;
+  grid-template-rows: 24vmin 24vmin 24vmin;
+  grid-gap: 2vmin;
+  position: absolute;
+  top: 8vh;
+  justify-content: center;
+  left: 3vw;
+  margin: auto;
+  opacity: 0;
+}
+#goliathHighlightsDetails3 {
+  padding-left: 5vmin;
+  padding-right: 6vmin;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 3vmin;
+  text-align: left;
+  padding-bottom: 1vmin;
+  padding-top: 2vmin;
+  background-color: white;
+  padding-left: 3vw;
+}
+
+#specIcon3 {
+  background-repeat: no-repeat;
+  height: 7vmin;
+  background-size: contain;
+}
+
+.specIconComputer2 {
+  background-image: url("computerIcon.png");
+}
+.specIconHandling2 {
+  background-image: url("headlightIcon.png");
+}
+.specIconParking2 {
+  background-image: url("parkingIcon.png");
+}
+.specIconHeadlights2 {
+  background-image: url("handlingIcon.png");
+}
+
+#carsMenu:hover {
+  color: black;
+  background-color: yellow;
+  border: 2px solid black;
+  font-size: 5.5vmin;
+}
+
+#menu {
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(#4c4444, #191616);
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menuSlide1 {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+@keyframes menuSlide2 {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+.menuList {
+  height: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 15vh;
+  left: 5vw;
+  /* background-color: lawngreen; */
+  list-style: circle;
+}
+
+.menulist li > a {
+  color: white;
+  text-decoration: none;
+  font-family: fantasy;
+  margin-bottom: 2rem;
+  display: block;
+  font-weight: lighter;
+  letter-spacing: 0.2vw;
+  margin-top: 3vh;
+  font-size: 2.7rem;
+  padding-left: 3vw;
+  transition: all 0.5s;
+}
+.menulist li > a:hover {
+  color: black;
+}
+
+.menuHighlight {
+  font-size: 3rem;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  color: yellow;
 }
 
 #soundsGood {
-  height: 77vmin;
+  height: 84vmin;
   width: 100vw;
   background-color: #ffc929;
   position: relative;
-  top: 157vmin;
+  top: 250vmin;
 }
 #soundsGoodTop1 {
   height: 40vw;
@@ -1148,52 +1827,447 @@ input[type="color"] {
   position: absolute;
   right: 0%;
 }
-#grey {
-  height: 30vh;
-  width: 84vw;
-  background-color: black;
-  position: relative;
-  top: 166vmin;
-  right: -16vw;
-  z-index: -1;
-  /* transform: skewX(-21deg); */
-}
-#grey2 {
-  height: inherit;
-  width: 22%;
-  background-color: black;
+
+/* for black trucks */
+
+#black {
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
-  left: -12vw;
-  z-index: -1;
-  transform: skewX(-21deg);
-  border-radius: 3vw;
+  left: 0;
 }
-#text1 {
-  height: 63%;
-  width: 82%;
-  /* background-color: red; */
+#blackAngle1 {
+  height: 100%;
+  width: 100%;
   position: absolute;
-  top: 21vmin;
-  right: 12%;
-  font-size: 8vw;
-  font-family: fantasy;
-  font-style: italic;
-  letter-spacing: 0.2vw;
-  z-index: 2;
+  background-image: url("blackAngle1.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
-#text2 {
-  height: 14%;
-  width: 29%;
-  background-color: transparent;
+#blackAngle2 {
+  height: 100%;
+  width: 100%;
   position: absolute;
-  top: 23vw;
-  left: 18%;
-  font-size: 2.5vw;
-  font-family: fantasy;
-  font-style: italic;
-  padding-left: 2vw;
-  z-index: 2;
+  background-image: url("blackAngle2.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#blackAngle3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("blackAngle3.jpg");
+  background-size: cover;
+  opacity: 1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#blackAngle4 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("blackAngle4.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#blackAngle5 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("blackAngle5.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes blackChev {
+  0% {
+    /* opacity: 0.3; */
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* for white trucks */
+#white {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#whiteAngle1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("whiteAngle1.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#whiteAngle2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("whiteAngle2.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#whiteAngle3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("whiteAngle3.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#whiteAngle4 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("whiteAngle4.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#whiteAngle5 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("whiteAngle5.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes whiteChev {
+  0% {
+    /* opacity: 0.3; */
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#whiteAngles {
+  height: 13%;
+  width: 66vw;
+  background-color: #2f2b2b;
   border: 2px solid black;
-  border-radius: 24px;
+  align-self: center;
+  position: absolute;
+  bottom: 4vmin;
+  left: 7vw;
+  display: flex;
 }
+#whiteAngle1S {
+  height: 100%;
+  width: 100%;
+  background-image: url("whiteAngle1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  z-index: 1;
+  transition: all 0.5s;
+}
+#whiteAngle1S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#whiteAngle2S {
+  height: 100%;
+  width: 100%;
+  background-image: url("whiteAngle2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  z-index: 1;
+  transition: all 0.5s;
+}
+#whiteAngle2S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#whiteAngle3S {
+  height: 100%;
+  width: 100%;
+  background-image: url("whiteAngle3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+#whiteAngle3S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#whiteAngle4S {
+  height: 100%;
+  width: 101%;
+  background-image: url("whiteAngle4.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+#whiteAngle4S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#whiteAngle5S {
+  height: 100%;
+  width: 100%;
+  background-image: url("whiteAngle5.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+#whiteAngle5S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+
+/* css for red truck */
+
+#red {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#redAngle1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("redAngle1.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#redAngle2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("redAngle2.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#redAngle3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("redAngle3.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#redAngle4 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("redAngle4.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#redAngle5 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("redAngle5.jpg");
+  background-size: cover;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes redChev {
+  0% {
+    /* opacity: 0.3; */
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#redAngles {
+  height: 13%;
+  width: 66vw;
+  background-color: #2f2b2b;
+  border: 2px solid black;
+  align-self: center;
+  position: absolute;
+  bottom: 4vmin;
+  left: 7vw;
+  display: flex;
+}
+#redAngle1S {
+  height: 100%;
+  width: 100%;
+  background-image: url("redAngle1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  z-index: 1;
+  transition: all 0.5s;
+}
+#redAngle1S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#redAngle2S {
+  height: 100%;
+  width: 100%;
+  background-image: url("redAngle2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  z-index: 1;
+  transition: all 0.5s;
+}
+#redAngle2S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#redAngle3S {
+  height: 100%;
+  width: 100%;
+  background-image: url("redAngle3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+#redAngle3S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#redAngle4S {
+  height: 100%;
+  width: 101%;
+  background-image: url("redAngle4.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+#redAngle4S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+#redAngle5S {
+  height: 100%;
+  width: 100%;
+  background-image: url("redAngle5.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+#redAngle5S:hover {
+  height: 120%;
+  width: 120%;
+  outline: 2px solid black;
+}
+
+#playButton {
+  transition: all 0.8s;
+}
+#playButton:hover {
+  background-color: black;
+  box-shadow: 1px 1px 12px 5px rgb(124 124 40);
+}
+#hoverBackground {
+  height: 22%;
+  width: 100%;
+  position: absolute;
+  bottom: 0vh;
+  z-index: 10;
+  background-color: red;
+
+  /* background-image: radial-gradient(#887878, #3a3131); */
+}
+
+/* .textShadow{
+  animation: textShadow;
+  animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+@keyframes textShadow {
+  0%{
+    text-shadow: -12px 4px 0 #0f0, -16px -1px 0 #00f;
+  }
+  20% {
+    text-shadow: 10px 2px 0 rgb(0, 0, 0), 2px -4px 0 rgb(255, 0, 0);
+  }
+  40% {
+    text-shadow: -5px 2px 0 rgb(128, 120, 9), 3px -1px 0 rgb(0, 255, 115);
+  }
+  60% {
+    text-shadow: 20px -1px 0 rgb(255, 0, 0), -25px -2px 0 rgb(255, 0, 234);
+  }
+  80%{
+    text-shadow: -16px 1px 0 #0f0, 20px 1px 0 #00f;
+  }
+  100%{
+    text-shadow: -12px 4px 0 #0f0, -16px -1px 0 #00f;
+
+  }
+} */
